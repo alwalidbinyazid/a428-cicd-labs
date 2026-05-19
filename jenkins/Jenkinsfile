@@ -4,15 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
-                // Biasanya di sini 'npm install', tapi kita echo dulu biar HIJAU
-                sh 'echo "Build Stage Success"'
+                echo 'Memulai proses Build...'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing...'
-                sh 'echo "Test Stage Success"'
+                echo 'Memulai proses Test...'
+                sh 'npm test'
             }
         }
     }
