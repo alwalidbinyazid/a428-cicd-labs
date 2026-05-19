@@ -15,7 +15,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing React App...'
-                // Menambahkan CI=true agar proses test tidak hang/berjalan terus menerus (standar CI/CD React)
                 sh 'CI=true npm test' 
             }
         }
